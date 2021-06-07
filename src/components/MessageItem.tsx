@@ -36,8 +36,11 @@ export const MessageItem: React.VFC<MessageItemProps> = ({mess, deleteHandler}) 
         <li key={mess.id.toString()} style={{padding: 5}}
             onMouseEnter={onHover} onMouseLeave={onLeave}>
 
-            <span style={{fontWeight: "bold"}}> {formatDate(mess.dateTime)}, {mess.user}: </span>
+            <span style={{color: mess.user=="Sabrina" ? "blue" : "red", fontWeight: "bold"}}>
+                {formatDate(mess.dateTime)}, {mess.user}:
+            </span><br/>
             <span>{mess.text}</span>
+
             {hover &&
                 <span style={{padding: 5}}>
                     <button onClick={deleteItemHandler}>Delete</button>

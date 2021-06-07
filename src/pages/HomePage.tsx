@@ -27,10 +27,12 @@ export const HomePage = (): JSX.Element => {
     }
 
     return (
-        <div>
+        <div style={{width: "75vw", margin: "auto"}}>
             <div>
                 <h2>Messages</h2>
-                <MessageList messages = {messList} deleteHandler={deleteMessHandler}/>
+                <div style={{width: "25vw", margin: "auto"}}>
+                    <MessageList messages = {messList} deleteHandler={deleteMessHandler}/>
+                </div>
             </div>
 
             <hr />
