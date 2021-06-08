@@ -1,46 +1,57 @@
-# Getting Started with Create React App
+# Reactjs Code Challenge - Chat
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+v1.0
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+This is a test to assess your React and JavaScript skills.
 
-### `yarn start`
+You are allowed to use npm to install modules to build your application if you think it will help you. The focus will be on your coding skills, build tools are just details.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Please create a branch starting from master, commit your changes, and when ready make a PR (Merge request/Pull request) to master with the install and run instructions. If something is not clear, please ask.
+## 1 Coding exercise
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Implement, using React, a very simple CHAT web application that runs exclusively in the browser.
+UI will be composed by a Messages'List and 2 TextInput that simulates 2 users that send messages each others.
 
-### `yarn test`
+Here are the main use cases:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Each TextInput must be assigned to a fake user, who has got a fixed username (use your imagination)
+- User can fill one of the TextInput, and pressing "Enter" the message will be sent to the Messages'List together with username and datetime, these will appear in the Messages'List in a well-styled way (some CSS required).
+- If TextInput is empty when "Enter" is pressed an error will appear.
+- User can delete a Message by pressing some icon that appear only on mouseover, contained in the Message element.
+- Messages will appear from bottom to top in the Messages'List.
 
-### `yarn build`
+_Bonus 1_: Use modern browser capabilities to persist the state of the application, allowing refresh page without losing data.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+_Bonus 2_: When the ArrowUp is pressed in a TextInput, that input will be filled with the last message sent by that user (if exists), and when is pressed Enter again, that last message is replaced with the edited message.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+_Bonus 3_: Using CSS3 transitions, animate the text-color of every message added to the list, starting from a "Color 1" when created and ending with a "Color 2" using a transition with a duration of 10 seconds.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+|-------- MessagesList -------|
+|                             |
+|                             |
+|                             |
+|                             |
+|16:07 zelda                  |
+| Hey, how you doing?         |
+|                             |
+|                   goku 16:10|
+|     Shh!, Doing a challenge |
+|-----------------------------|
 
-### `yarn eject`
+zelda        [________________]
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+goku         [________________]
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 2 Testing exercise
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Please set up a testing solution that allows to test the code you have created during step 2.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Tips
 
-## Learn More
+This application might be sent as a "usability test" to someone inside our Company without explaining its functionalities at all, so build a UI easy to understand.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Take into account that every Merge Request will be processed and reviewed like any other Merge Request inside Company, so expect that, after requesting a review, there might be some change requests ;)
